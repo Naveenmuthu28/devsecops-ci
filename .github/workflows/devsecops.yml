@@ -1,1 +1,14 @@
 # DevSecOps CI/CD workflow
+name: DevSecOps CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test workflow
+        run: echo "GitHub Actions is working"
