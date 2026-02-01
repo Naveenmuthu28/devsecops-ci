@@ -23,3 +23,6 @@ jobs:
 
       - name: OWASP Dependency Check
         run: mvn org.owasp:dependency-check-maven:check -DfailOnError=false
+        
+      - name: Docker Build
+        run: docker build -t ${{ github.repository }} .
